@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/mainFragment">
+
+    <fragment android:id="@+id/mainFragment" android:name="com.kotlin.navigation.MainFragment"
+              android:label="fragment_main" tools:layout="@layout/fragment_main">
+        <action android:id="@+id/action_mainFragment_to_blankFragment" app:destination="@id/blankFragment"/>
+        <action android:id="@+id/action_mainFragment_to_blankFragment3" app:destination="@id/blankFragment3"/>
+        <action android:id="@+id/action_mainFragment_to_blankFragment4" app:destination="@id/blankFragment4"/>
+    </fragment>
+
+    <fragment android:id="@+id/blankFragment"
+              android:name="com.kotlin.navigation.BlankFragment"
+              android:label="fragment_blank"
+              tools:layout="@layout/fragment_blank">
+        <action android:id="@+id/action_blankFragment_to_blankFragment2"
+                app:destination="@id/blankFragment2"/>
+        <argument android:name="text" app:argType="string" android:defaultValue="안왔잖아"/>
+    </fragment>
+    <fragment android:id="@+id/blankFragment2"
+              android:name="com.kotlin.navigation.BlankFragment2"
+              android:label="fragment_blank_fragment2"
+              tools:layout="@layout/fragment_blank_fragment2">
+    </fragment>
+
+    <fragment android:id="@+id/blankFragment3" android:name="com.kotlin.navigation.BlankFragment3"
+              android:label="fragment_blank_fragment3" tools:layout="@layout/fragment_blank_fragment3"/>
+    <fragment android:id="@+id/blankFragment4" android:name="com.kotlin.navigation.BlankFragment4"
+              android:label="fragment_blank_fragment4" tools:layout="@layout/fragment_blank_fragment4"/>
+</navigation>
