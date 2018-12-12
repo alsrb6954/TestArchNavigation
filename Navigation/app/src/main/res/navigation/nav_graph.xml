@@ -37,9 +37,18 @@
               tools:layout="@layout/fragment_blank_fragment4">
     </fragment>
     <action android:id="@+id/action_global_mainFragment" app:destination="@id/mainFragment"/>
-    <fragment android:id="@+id/blankFragment5"
-              android:name="com.kotlin.navigation.BlankFragment5"
-              android:label="fragment_blank_fragment5"
-              tools:layout="@layout/fragment_blank_fragment5"/>
-    <action android:id="@+id/action_global_blankFragment5" app:destination="@id/blankFragment5"/>
+    <action android:id="@+id/action_global_blankFragment5" app:destination="@id/profile"/>
+
+    <navigation android:id="@+id/profile" app:startDestination="@id/blankFragment5">
+        <fragment android:id="@+id/loginFragment" android:name="com.kotlin.navigation.LoginFragment"
+                  android:label="Login" tools:layout="@layout/fragment_login"/>
+        <fragment android:id="@+id/blankFragment5"
+                  android:name="com.kotlin.navigation.BlankFragment5"
+                  android:label="Profile"
+                  tools:layout="@layout/fragment_blank_fragment5">
+            <action android:id="@+id/action_blankFragment5_to_loginFragment" app:destination="@id/loginFragment"/>
+            <argument app:argType="string" android:name="name" android:defaultValue='""'/>
+        </fragment>
+        <argument android:name="name"/>
+    </navigation>
 </navigation>

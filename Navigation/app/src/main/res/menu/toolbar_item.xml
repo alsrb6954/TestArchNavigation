@@ -1,9 +1,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-            android:id="@+id/profile"
+            android:id="@+id/noLoginProfile"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:title="로그인안된프로필"
+            app:showAsAction="ifRoom"/>
+    <item
+            android:id="@+id/LoginProfile"
             android:icon="@android:drawable/ic_menu_preferences"
             android:title="프로필"
             app:showAsAction="ifRoom"/>
-
 </menu>
