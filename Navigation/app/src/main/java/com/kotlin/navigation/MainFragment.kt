@@ -3,6 +3,7 @@ package com.kotlin.navigation
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
@@ -19,18 +20,5 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        one.setOnClickListener {
-            val action = MainFragmentDirections.actionMainFragmentToBlankFragment().setText("멋있네요!!")
-            Navigation.findNavController(it).navigate(action)
-        }
-
-        two.setOnClickListener {
-            Navigation.findNavController(it).navigate(MainFragmentDirections.actionMainFragmentToBlankFragment3().actionId)
-        }
-
-        three.setOnClickListener {
-            Navigation.findNavController(it).navigate(MainFragmentDirections.actionMainFragmentToBlankFragment4().actionId)
-        }
     }
 }

@@ -23,5 +23,5 @@
             app:showAsAction="ifRoom"
             android:enabled="true"
             android:icon="@android:drawable/ic_input_get"
-            android:title="EMAIL" />
+            android:title="SETTING" />
 </menu>
