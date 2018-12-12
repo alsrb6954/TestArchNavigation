@@ -21,11 +21,16 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         one.setOnClickListener {
-//            Navigation.createNavigateOnClickListener(R.id.action_mainFragment_to_blankFragment,null)
-//            BlankFragmentDirections
-
             val action = MainFragmentDirections.actionMainFragmentToBlankFragment().setText("멋있네요!!")
             Navigation.findNavController(it).navigate(action)
+        }
+
+        two.setOnClickListener {
+            Navigation.findNavController(it).navigate(MainFragmentDirections.actionMainFragmentToBlankFragment3())
+        }
+
+        three.setOnClickListener {
+            Navigation.findNavController(it).navigate(MainFragmentDirections.actionMainFragmentToBlankFragment4())
         }
     }
 }
