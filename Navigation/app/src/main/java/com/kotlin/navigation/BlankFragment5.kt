@@ -23,7 +23,7 @@ class BlankFragment5 : Fragment() {
 
         val name = BlankFragment5Args.fromBundle(arguments).name
 
-        if(name == ""){
+        if(name == "minkyu"){
             AlertDialog.Builder(activity!!).setMessage("로그인 하자")
                 .setPositiveButton("좋아") { dialog, which ->
                     Navigation.findNavController(view).navigate(BlankFragment5Directions.actionBlankFragment5ToLoginFragment().actionId)

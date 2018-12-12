@@ -6,7 +6,9 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.navigation.Navigation
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
+import com.kotlin.navigation.R.id.blankFragment5
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +22,9 @@ class MainActivity : AppCompatActivity() {
         // 첫번쨰 방법
         val navController = Navigation.findNavController(this, R.id.my_nav_host_fragment)
         NavigationUI.setupWithNavController(bottom_nav, navController)
-        NavigationUI.setupWithNavController(toolbar, navController)
+        NavigationUI.setupWithNavController(toolbar, navController, nav_draw)
+
+        NavigationUI.setupWithNavController(nav_view, navController)
 
         // 두번째 방법
 //        val navHostFragment = supportFragmentManager.findFragmentById(R.id.my_nav_host_fragment) as NavHostFragment
@@ -40,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when(item?.itemId){
-            R.id.noLoginProfile ->{
+            R.id.blankFragment5 ->{
                 Navigation.findNavController(this, R.id.my_nav_host_fragment).navigate(R.id.action_global_blankFragment5)
             }
             R.id.LoginProfile ->{

@@ -51,4 +51,18 @@
         </fragment>
         <argument android:name="name"/>
     </navigation>
+    <navigation android:id="@+id/cloth" app:startDestination="@id/topFragment">
+        <fragment android:id="@+id/topFragment"
+                  android:name="com.kotlin.navigation.cloth.TopFragment"
+                  android:label="Top"
+                  tools:layout="@layout/fragment_top"/>
+        <fragment android:id="@+id/bottomFragment"
+                  android:name="com.kotlin.navigation.cloth.BottomFragment"
+                  android:label="Bottom"
+                  tools:layout="@layout/fragment_bottom"/>
+        <fragment android:id="@+id/kniteFragment"
+                  android:name="com.kotlin.navigation.cloth.KniteFragment"
+                  android:label="Knit"
+                  tools:layout="@layout/fragment_knite"/>
+    </navigation>
 </navigation>
