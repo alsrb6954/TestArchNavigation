@@ -26,11 +26,11 @@ class MainFragment : Fragment() {
         }
 
         two.setOnClickListener {
-            Navigation.findNavController(it).navigate(MainFragmentDirections.actionMainFragmentToBlankFragment3())
+            Navigation.findNavController(it).navigate(MainFragmentDirections.actionMainFragmentToBlankFragment3().actionId)
         }
 
         three.setOnClickListener {
-            Navigation.findNavController(it).navigate(MainFragmentDirections.actionMainFragmentToBlankFragment4())
+            Navigation.findNavController(it).navigate(MainFragmentDirections.actionMainFragmentToBlankFragment4().actionId)
         }
     }
 }

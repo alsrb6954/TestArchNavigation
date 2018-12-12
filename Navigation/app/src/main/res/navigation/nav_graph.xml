@@ -28,11 +28,13 @@
               tools:layout="@layout/fragment_blank_fragment2">
     </fragment>
 
-    <fragment android:id="@+id/blankFragment3" android:name="com.kotlin.navigation.BlankFragment3"
-              android:label="fragment_blank_fragment3" tools:layout="@layout/fragment_blank_fragment3"/>
-    <fragment android:id="@+id/blankFragment4" android:name="com.kotlin.navigation.BlankFragment4"
+    <fragment android:id="@+id/blankFragment3"
+              android:name="com.kotlin.navigation.BlankFragment3"
+              android:label="fragment_blank_fragment3"
+              tools:layout="@layout/fragment_blank_fragment3"/>
+    <fragment android:id="@+id/blankFragment4"
+              android:name="com.kotlin.navigation.BlankFragment4"
               android:label="fragment_blank_fragment4" tools:layout="@layout/fragment_blank_fragment4">
-        <argument android:name="data"/>
     </fragment>
     <action android:id="@+id/action_global_mainFragment" app:destination="@id/mainFragment"/>
 </navigation>
